@@ -208,6 +208,7 @@ impl MetaSchema {
             unique_items,
             max_properties,
             min_properties,
+            mut properties,
             ..
         }: MetaSchema,
     ) -> Self {
@@ -264,6 +265,8 @@ impl MetaSchema {
                 self.items = Some(items);
             }
         }
+
+        self.properties.append(&mut properties);
 
         if let Some(additional_properties) = additional_properties {
             if let Some(self_additional_properties) = self.additional_properties {

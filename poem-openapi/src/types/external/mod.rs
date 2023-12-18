@@ -22,6 +22,7 @@ mod optional;
 #[cfg(feature = "prost-wkt-types")]
 mod prost_wkt_types;
 mod regex;
+mod result;
 mod slice;
 mod string;
 #[cfg(feature = "time")]
